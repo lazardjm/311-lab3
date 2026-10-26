@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='utf-8'?>
+<circuit>
+  <version>2</version>
+  <attributes />
+  <visualElements>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>A</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>hex</intFormat>
+        </entry>
+      </elementAttributes>
+      <pos x="160" y="220" />
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>B</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>hex</intFormat>
+        </entry>
+      </elementAttributes>
+      <pos x="160" y="340" />
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>Sub</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>1</int>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>bin</intFormat>
+        </entry>
+      </elementAttributes>
+      <pos x="160" y="460" />
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>Out</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>hex</intFormat>
+        </entry>
+      </elementAttributes>
+      <pos x="840" y="220" />
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>Sign</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>1</int>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>bin</intFormat>
+        </entry>
+      </elementAttributes>
+      <pos x="840" y="340" />
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>Overflow</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>1</int>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>bin</intFormat>
+        </entry>
+      </elementAttributes>
+      <pos x="840" y="460" />
+    </visualElement>
+    <visualElement>
+      <elementName>Testcase</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>add-sub-unit tests</string>
+        </entry>
+        <entry>
+          <string>Testdata</string>
+          <testData>
+            <dataString>A B Sub Out Sign Overflow
+0x00000000 0x00000000 0 0x00000000 0 0
+0x00000000 0x00000000 1 0x00000000 0 0
+0x00000000 0x00000001 0 0x00000001 0 0
+0x00000000 0x00000001 1 0xFFFFFFFF 1 0
+0x00000001 0x00000000 0 0x00000001 0 0
+0x00000001 0x00000000 1 0x00000001 0 0
+0x00000001 0x00000001 0 0x00000002 0 0
+0x00000001 0x00000001 1 0x00000000 0 0
+0x00000004 0x00000005 0 0x00000009 0 0
+0x00000004 0x00000005 1 0xFFFFFFFF 1 0
+0x00000003 0x00000001 0 0x00000004 0 0
+0x00000003 0x00000001 1 0x00000002 0 0
+0xFFFFFFFF 0x00000001 0 0x00000000 0 0
+0xFFFFFFFF 0x00000001 1 0xFFFFFFFE 1 0
+0x7FFFFFFF 0x00000001 0 0x80000000 1 1
+0x7FFFFFFF 0x00000001 1 0x7FFFFFFE 0 0
+0x80000000 0x00000001 0 0x80000001 1 0
+0x80000000 0x00000001 1 0x7FFFFFFF 0 1
+0x00000000 0x80000000 0 0x80000000 1 0
+0x00000000 0x80000000 1 0x80000000 1 1
+0x80000000 0xFFFFFFFF 0 0x7FFFFFFF 0 1
+0x80000000 0xFFFFFFFF 1 0x80000001 1 0
+0x7FFFFFFF 0xFFFFFFFF 0 0x7FFFFFFE 0 0
+0x7FFFFFFF 0xFFFFFFFF 1 0x80000000 1 1
+0x80000000 0x80000000 0 0x00000000 0 1
+0x80000000 0x80000000 1 0x00000000 0 0
+0xFFFFFFFF 0xFFFFFFFF 0 0xFFFFFFFE 1 0
+0xFFFFFFFF 0xFFFFFFFF 1 0x00000000 0 0
+0xA5A5A5A5 0x0F0F0F0F 0 0xB4B4B4B4 1 0
+0xA5A5A5A5 0x0F0F0F0F 1 0x96969696 1 0
+0x65271812 0xDE772179 0 0x439E398B 0 0
+0x65271812 0xDE772179 1 0x86AFF699 1 1
+0xD40719BE 0x2D28E457 0 0x012FFE15 0 0
+0xD40719BE 0x2D28E457 1 0xA6DE3567 1 0
+0x60143E4B 0x37E4C558 0 0x97F903A3 1 1
+0x60143E4B 0x37E4C558 1 0x282F78F3 0 0
+0xBE024F92 0x4DA2DD64 0 0x0BA52CF6 0 0
+0xBE024F92 0x4DA2DD64 1 0x705F722E 0 1
+0x364F475A 0x7E8E5F7B 0 0xB4DDA6D5 1 1
+0x364F475A 0x7E8E5F7B 1 0xB7C0E7DF 1 0
+0x0342D6C5 0xF8395671 0 0xFB7C2D36 1 0
+0x0342D6C5 0xF8395671 1 0x0B098054 0 0
+0xE46AFB81 0x1A6AB1C5 0 0xFED5AD46 1 0
+0xE46AFB81 0x1A6AB1C5 1 0xCA0049BC 1 0
+0x200E3EA2 0x9C4907CA 0 0xBC57466C 1 0
+0x200E3EA2 0x9C4907CA 1 0x83C536D8 1 1
+0x58B7CC89 0x1E6CC2D8 0 0x77248F61 0 0
+0x58B7CC89 0x1E6CC2D8 1 0x3A4B09B1 0 0
+0xCB94FB25 0x609F0859 0 0x2C34037E 0 0
+0xCB94FB25 0x609F0859 1 0x6AF5F2CC 0 1
+0x85E89FB5 0x9D223D73 0 0x230ADD28 0 1
+0x85E89FB5 0x9D223D73 1 0xE8C66242 1 0
+0x173613CD 0x0221F40D 0 0x195807DA 0 0
+0x173613CD 0x0221F40D 1 0x15141FC0 0 0
+</dataString>
+          </testData>
+        </entry>
+      </elementAttributes>
+      <pos x="160" y="80" />
+    </visualElement>
+  </visualElements>
+  <wires />
+  <measurementOrdering />
+</circuit>
